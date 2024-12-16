@@ -1,0 +1,58 @@
+
+  .card {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      height: 500px;
+    }
+    
+    .card-img {
+      height: 150px;
+    }
+  }
+  
+  .contenedorPizza {
+    display: flex;
+  }
+  
+  .pizza-info {  
+    background-color: #f8f9fa;  
+    border-radius: 10px;  
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+  }
+  .pizzaName {
+    text-transform: capitalize;
+  }
+  
+  .pizzaIngredientes {
+    text-transform: capitalize;
+  }
+  
+  .botonera-Profile {
+    margin-top: 5rem;
+  }
+  
+  .card-body-Profile {
+    height: 80vh;
+    margin-top: 1rem;
+  }
+  
+  .container-Profile {
+    margin-top: 4rem;
+  } 
