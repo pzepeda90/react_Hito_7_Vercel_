@@ -8,7 +8,6 @@
     margin-top: auto;
 }
 
-/* Agregar esto al componente principal de la página */
 .page-container {
     min-height: 100vh;
     display: flex;

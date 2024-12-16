@@ -13,12 +13,10 @@ html, body, #root {
     flex-direction: column;
 }
 
-/* Clase específica para páginas sin scroll */
 .no-scroll {
     overflow: hidden;
 }
 
-/* Clase específica para páginas con scroll */
 .with-scroll {
     overflow-y: auto;
 }

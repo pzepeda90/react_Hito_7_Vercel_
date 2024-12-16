@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
 import { UserContext } from '../../context/UserContext'
 import './navbar.css'
+
 export const Navbar = () => {
   const { cartItems } = useContext(CartContext)
   const { isAuthenticated, logout } = useContext(UserContext)
