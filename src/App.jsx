@@ -11,6 +11,9 @@ import { NotFound } from './components/NotFound/NotFound';
 import { Profile } from './components/Profile/Profile';
 import { CartProvider } from './context/CartContext';
 import { UserProvider } from './context/UserContext';
+import { ProtectedRoute } from './components/ProtectedRoute/ProtectedRoute';
+import { PublicRoute } from './components/ProtectedRoute/ProtectedRoute';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 
 function App() {
   return (
@@ -21,10 +24,31 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/pizza/:id" element={<Pizza />} />
-            <Route path="/register" element={<Register_Page />} />
-            <Route path="/login" element={<Login_Page />} />
+            <Route 
+              path="/register" 
+              element={
+                <PublicRoute>
+                  <Register_Page />
+                </PublicRoute>
+              } 
+            />
+            <Route 
+              path="/login" 
+              element={
+                <PublicRoute>
+                  <Login_Page />
+                </PublicRoute>
+              } 
+            />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route 
+              path="/profile" 
+              element={
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
+              } 
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

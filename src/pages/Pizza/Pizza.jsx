@@ -7,7 +7,8 @@ import { Header } from '../../components/Header/Header';
 import { FaPizzaSlice } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/dist/sweetalert2.css'
 
 export const Pizza = () => {  
     const { id } = useParams();  
